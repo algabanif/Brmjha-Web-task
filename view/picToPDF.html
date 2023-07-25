@@ -373,7 +373,28 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
-    <script type="text/javascript" src="/public/picTopdf/topdf.js"></script>
+    <script>
+    var newImage, showImg;
+    function loadFile(event) {
+    showImg = document.getElementById('showImg');
+    showImg.src = URL.createObjectURL(event.target.files[0]);
+
+    newImage = document.createElement('img');
+    newImage.src = URL.createObjectURL(event.target.files[0]);
+    
+    showImg.onload = function() {
+        URL.revokeObjectURL(showImg.src) // free memory
+    }
+    };
+
+    function pdfDown(){
+    console.log(newImage)
+    var doc = new jsPDF();
+    doc.addImage(newImage,10,10);
+    doc.save('ImgToPDF.pdf')
+    }
+
+    </script>
 
 </body>
 </html>
