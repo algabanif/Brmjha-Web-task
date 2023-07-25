@@ -8613,7 +8613,7 @@
   var dynamicLoaderSupported = typeof requirejs !== 'undefined' && requirejs.load;
   var fakeWorkerFilesLoader = useRequireEnsure ? (function (callback) {
     require.ensure([], function () {
-      var worker = require('../pdf.worker.js');
+      var worker = require('./pdf.worker.js');
       callback(worker.WorkerMessageHandler);
     });
   }) : dynamicLoaderSupported ? (function (callback) {
