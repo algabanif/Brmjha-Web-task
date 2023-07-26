@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>EasyTasks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+
+    <script src="script.js" defer></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+
+        body{
+            font-family: 'Open Sans', sans-serif;
+            background-color: #fff;
+            height: 1000px;
+            overflow:scroll;
+        }
+
+
+        /* Header style */
+        .container-bar{
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .header {
+            position: static;
+            width: 100%;
+            background-color: #00428a;
+            color: #ffffff;
+            padding: 0.7rem;
+            position: flex;
+        }
+
+        .header .container-bar{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+        }
+
+        .header h2{
+            color: #ffffff;
+            font-weight: 800;
+        }
+
+        .header img{
+            margin-right: 20px;
+        }
+
+        .header a{
+            text-decoration: none;
+        }
+
+        /* End Header style */
+
+
+        /* Navpar */
+        .topnav {
+            overflow: hidden;
+            background-color: #0b6bd3;
+        }
+        
+        /* Style the links inside the navigation bar */
+        .topnav a {
+            float: left;
+            display: block;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        
+        /* Change the color of links on hover */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        /* Style the "active" element to highlight the current page */
+        .topnav a.active {
+            background-color: #3f6ec4;
+            color: white;
+        }
+        
+        /* Style the search box inside the navigation bar */
+        .topnav input[type=text] {
+            float: right;
+            padding: 6px;
+            border: none;
+            margin-top: 8px;
+            margin-right: 16px;
+            font-size: 17px;
+        }
+        
+
+      
+
+        /* About */
+        .about{
+            width: 50%;
+            text-align: center;
+            margin: auto;
+            margin-top: 60px;
+        }
+
+
+
+
+
+
+        .wrapper{
+        margin: auto;
+        width: 450px;
+        height: 288px;
+        padding: 30px;
+        background: #fff;
+        border-radius: 9px;
+        transition: height 0.2s ease;
+        }
+
+        .wrapper.active{
+        height: 537px;
+        }
+
+        .wrapper .upload-box{
+        height: 225px;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 5px;
+        border: 2px dashed #afafaf;
+        }
+
+        .wrapper.active .upload-box{
+        border: none;
+        }
+
+        .upload-box p{
+        font-size: 1.06rem;
+        margin-top: 20px;
+        }
+
+        .wrapper.active .upload-box p{
+        display: none;
+        }
+
+        .wrapper.active .upload-box img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+        }
+
+        .wrapper .content{
+        opacity: 0;
+        margin-top: 28px;
+        pointer-events: none;
+        }
+        
+        .wrapper.active .content{
+        opacity: 1;
+        pointer-events: auto;
+        transition: opacity 0.5s 0.05s ease;
+        }
+
+        .content .row{
+        display: flex;
+        justify-content: space-between;
+        }
+
+        .content .row .column{
+        width: calc(100% / 2 - 15px);
+        }
+
+        .row .column label{
+        font-size: 1.06rem;
+        }
+
+        .sizes .column input{
+        width: 100%;
+        height: 49px;
+        outline: none;
+        margin-top: 7px;
+        padding: 0 15px;
+        font-size: 1.06rem;
+        border-radius: 4px;
+        border: 1px solid #aaa;
+        }
+
+        .sizes .column input:focus{
+        padding: 0 14px;
+        border: 2px solid #373838;
+        }
+
+        .content .checkboxes{
+        margin-top: 20px;
+        }
+
+        .checkboxes .column{
+        display: flex;
+        align-items: center;
+        }
+        .checkboxes .column input{
+        width: 17px;
+        height: 17px;
+        margin-right: 9px;
+        accent-color: #373838;
+        }
+
+        .content .download-btn{
+        width: 100%;
+        color: #fff;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.06rem;
+        border-radius: 5px;
+        padding: 15px 0;
+        margin: 30px 0 10px;
+        background: #373838;
+        text-transform: uppercase;
+        }
+
+
+        
+                /* Footer */
+                .footer {
+            margin-top: 50px;
+            background-color: #00428a;
+            padding: 70px 0;
+        }
+
+        .footer-container {
+            max-width: 1170px;
+            margin: auto;
+        }
+        .footer-row{
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        .footer-col{
+            width: 25%;
+            padding: 0 15px;
+        }
+
+        .footer ul{
+            list-style: none;
+        }
+
+        .footer-col h4{
+            font-size: 18px;
+            color: #fff;
+            text-transform: capitalize;
+            margin-bottom: 30px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .footer-col h4::before{
+            content : '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: #fff;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child){
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a{
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #ffffff;
+            display: block;
+            transition: all 0.3s ease;
+
+        }
+
+        .footer-col ul li a:hover{
+            color: #ffffff;
+            padding-left: 10px;
+        }
+
+        .footer-col .social-links a{
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: #a2b1bb;
+            margin-right: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 1s ease;
+
+        }
+
+        .footer-col .social-links a:hover{
+            color: #84a4f5;
+            background-color: #fff;
+        }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <nav class="header">
+      <div class="container-bar">
+         <img src="/assets/img/logo.png" style="max-width: 50px;">
+         <a href="../index.html"><h2> ImgConv </h2></a>
+      </div>
+    </nav>
+
+    <!-- category  -->
+    <div class="topnav">
+      <a class="active" href="../index.html">Home</a>
+      <a href="#about">Account</a>
+      <a href="#contact">Contact</a>
+      <input type="text" placeholder="Search..">
+    </div>
+
+    <!-- About -->
+    <div class="aboutSection">
+    <div class="about">
+          <h2> Let your
+            Tasks Easier </h2>
+          <h4>
+            versatile platform that provides a range of valuable tools for managing different types of media files. With features that include downloading videos, files, and photos from any website, converting file types and picture formats, reducing file size, and removing backgrounds from photos, your website offers a convenient and user-friendly experience for people who need to work with media files. Whether users need to convert a file for a specific application or remove the background from an image for a project, your website can help them accomplish their goals quickly and easily. With its intuitive interface and powerful tools, your website is a valuable resource for anyone who needs to manage and manipulate media files.
+
+          </h4>
+      </div>
+    </div>
+
+
+
+    <div class="wrapper">
+      <div class="upload-box">
+        <input type="file" accept="image/*" hidden>
+        <img src="https://www.codingnepalweb.com/demos/resize-and-compress-image-javascript/upload-icon.svg" alt="">
+        <p>Browse File to Upload</p>
+      </div>
+      <div class="content">
+        <div class="row sizes">
+          <div class="column width">
+            <label>Width</label>
+            <input type="number">
+          </div>
+          <div class="column height">
+            <label>Height</label>
+            <input type="number">
+          </div>
+        </div>
+        <div class="row checkboxes">
+          <div class="column ratio">
+            <input type="checkbox" id="ratio" checked>
+            <label for="ratio">Lock aspect ratio</label>
+          </div>
+          <div class="column quality">
+            <input type="checkbox" id="quality">
+            <label for="quality">Reduce quality</label>
+          </div>
+        </div>
+        <button class="download-btn">Download Image</button>
+      </div>
+    </div>
+
+
+  
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-row">
+
+            <div class="footer-col">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">our services</a></li>
+                <li><a href="#">privacy policy</a></li>
+                <li><a href="#">affiliate program</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4>get help</h4>
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">shipping</a></li>
+                <li><a href="#">returns</a></li>
+                <li><a href="#">order status</a></li>
+                <li><a href="#">payment options</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Our websites</h4>
+                <ul>
+                  <li><a href="#">Files Editor</a></li>
+                  <li><a href="#">Video Editor</a></li>
+                  <li><a href="#">Picture Editor</a></li>
+                  <li><a href="#">other</a></li>
+                </ul>
+              </div>
+
+            <div class="footer-col">
+              <h4>follow us</h4>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+
+    <script>
+        const uploadBox = document.querySelector(".upload-box"),
+        previewImg = uploadBox.querySelector("img"),
+        fileInput = uploadBox.querySelector("input"),
+        widthInput = document.querySelector(".width input"),
+        heightInput = document.querySelector(".height input"),
+        ratioInput = document.querySelector(".ratio input"),
+        qualityInput = document.querySelector(".quality input"),
+        downloadBtn = document.querySelector(".download-btn");
+        let ogImageRatio;
+        const loadFile = (e) => {
+            const file = e.target.files[0]; // getting first user selected file
+            if(!file) return; // return if user hasn't selected any file
+            previewImg.src = URL.createObjectURL(file); // passing selected file url to preview img src
+            previewImg.addEventListener("load", () => { // once img loaded
+                widthInput.value = previewImg.naturalWidth;
+                heightInput.value = previewImg.naturalHeight;
+                ogImageRatio = previewImg.naturalWidth / previewImg.naturalHeight;
+                document.querySelector(".wrapper").classList.add("active");
+            });
+        }
+        widthInput.addEventListener("keyup", () => {
+            // getting height according to the ratio checkbox status
+            const height = ratioInput.checked ? widthInput.value / ogImageRatio : heightInput.value;
+            heightInput.value = Math.floor(height);
+        });
+        heightInput.addEventListener("keyup", () => {
+            // getting width according to the ratio checkbox status
+            const width = ratioInput.checked ? heightInput.value * ogImageRatio : widthInput.value;
+            widthInput.value = Math.floor(width);
+        });
+        const resizeAndDownload = () => {
+            const canvas = document.createElement("canvas");
+            const a = document.createElement("a");
+            const ctx = canvas.getContext("2d");
+            // if quality checkbox is checked, pass 0.5 to imgQuality else pass 1.0
+            // 1.0 is 100% quality where 0.5 is 50% of total. you can pass from 0.1 - 1.0
+            const imgQuality = qualityInput.checked ? 0.5 : 1.0;
+            // setting canvas height & width according to the input values
+            canvas.width = widthInput.value;
+            canvas.height = heightInput.value;
+            // drawing user selected image onto the canvas
+            ctx.drawImage(previewImg, 0, 0, canvas.width, canvas.height);
+            
+            // passing canvas data url as href value of <a> element
+            a.href = canvas.toDataURL("image/jpeg", imgQuality);
+            a.download = new Date().getTime(); // passing current time as download value
+            a.click(); // clicking <a> element so the file download
+        }
+        downloadBtn.addEventListener("click", resizeAndDownload);
+        fileInput.addEventListener("change", loadFile);
+        uploadBox.addEventListener("click", () => fileInput.click());
+    </script>
+  </body>
+
+</html>

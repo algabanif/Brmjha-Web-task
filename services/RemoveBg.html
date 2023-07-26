@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyTasks</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+    
+       
+      /* Import Google Font - Poppins */
+      
+      *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+
+        body{
+            font-family: 'Open Sans', sans-serif;
+            background-color: #fff;
+            height: 1000px;
+            overflow:scroll;
+        }
+
+
+        /* Header style */
+        .container-bar{
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .header {
+            position: static;
+            width: 100%;
+            background-color: #00428a;
+            color: #ffffff;
+            padding: 0.7rem;
+            position: flex;
+        }
+
+        .header .container-bar{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+        }
+
+        .header h2{
+            color: #ffffff;
+            font-weight: 800;
+        }
+
+        .header img{
+            margin-right: 20px;
+        }
+
+        .header a{
+            text-decoration: none;
+        }
+
+        /* End Header style */
+
+
+        /* Navpar */
+        .topnav {
+            overflow: hidden;
+            background-color: #0b6bd3;
+        }
+        
+        /* Style the links inside the navigation bar */
+        .topnav a {
+            float: left;
+            display: block;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        
+        /* Change the color of links on hover */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        /* Style the "active" element to highlight the current page */
+        .topnav a.active {
+            background-color: #3f6ec4;
+            color: white;
+        }
+        
+        /* Style the search box inside the navigation bar */
+        .topnav input[type=text] {
+            float: right;
+            padding: 6px;
+            border: none;
+            margin-top: 8px;
+            margin-right: 16px;
+            font-size: 17px;
+        }
+        
+        /* about */
+
+        .about{
+        width: 50%;
+        text-align: center;
+        margin: auto;
+        margin-top: 60px;
+        margin-bottom: 20px;
+        }   
+
+
+
+      .wrapper{
+        width: 50%;
+        margin: auto;
+      }
+
+      form{
+        margin: auto;
+      }
+      form input{
+        width: 100%;
+        height: 60px;
+        outline: none;
+        padding: 0 17px;
+        font-size: 19px;
+        border-radius: 5px;
+        border: 1px solid #b3b2b2;
+        transition: 0.1s ease;
+      }
+      form input::placeholder{
+        color: #b3b2b2;
+      }
+      form input:focus{
+        box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+      }
+      form button{
+        width: 100%;
+        border: none;
+        outline: none;
+        color: #fff;
+        cursor: pointer;
+        font-size: 17px;
+        margin-top: 20px;
+        padding: 15px 0;
+        border-radius: 5px;
+        background: #3f6ec4;
+        transition: opacity 0.15s ease;
+      }
+      form input:valid ~ button{
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+
+      
+
+        /* Footer */
+        .footer {
+            margin-top: 50px;
+            background-color: #00428a;
+            padding: 70px 0;
+        }
+
+        .footer-container {
+            max-width: 1170px;
+            margin: auto;
+        }
+        .footer-row{
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        .footer-col{
+            width: 25%;
+            padding: 0 15px;
+        }
+
+        .footer ul{
+            list-style: none;
+        }
+
+        .footer-col h4{
+            font-size: 18px;
+            color: #fff;
+            text-transform: capitalize;
+            margin-bottom: 30px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .footer-col h4::before{
+            content : '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: #fff;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child){
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a{
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #ffffff;
+            display: block;
+            transition: all 0.3s ease;
+
+        }
+
+        .footer-col ul li a:hover{
+            color: #ffffff;
+            padding-left: 10px;
+        }
+
+        .footer-col .social-links a{
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: #a2b1bb;
+            margin-right: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 1s ease;
+
+        }
+
+        .footer-col .social-links a:hover{
+            color: #84a4f5;
+            background-color: #fff;
+        }
+</style>
+  </head>
+<body>
+        <!-- Header -->
+        <nav class="header">
+          <div class="container-bar">
+             <img src="/assets/img/Logo.png" style="max-width: 50px;">
+             <a href="../index.html"><h2> ImgConv </h2></a>
+          </div>
+        </nav>
+    
+        <!-- category  -->
+        <div class="topnav">
+          <a class="active" href="../index.html">Home</a>
+          <a href="#about">Account</a>
+          <a href="#contact">Contact</a>
+          <input type="text" placeholder="Search..">
+        </div>
+    
+        <!-- About -->
+        <div class="aboutSection">
+        <div class="about">
+              <h2> Let your
+                Tasks Easier </h2>
+              <h4>
+                versatile platform that provides a range of valuable tools for managing different types of media files. With features that include downloading videos, files, and photos from any website, converting file types and picture formats, reducing file size, and removing backgrounds from photos, your website offers a convenient and user-friendly experience for people who need to work with media files. Whether users need to convert a file for a specific application or remove the background from an image for a project, your website can help them accomplish their goals quickly and easily. With its intuitive interface and powerful tools, your website is a valuable resource for anyone who needs to manage and manipulate media files.
+              </h4>
+          </div>
+        </div>
+
+    <div class="wrapper">
+        <header>
+          <h1>File Downloader</h1>
+          <p>Paste url of image, video, or pdf to download</p>
+        </header>
+        <form action="#">
+          <input type="url" placeholder="Paste file url" required>
+          <button>Download File</button>
+        </form>
+      </div>
+
+      <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-row">
+
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">our services</a></li>
+              <li><a href="#">privacy policy</a></li>
+              <li><a href="#">affiliate program</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">shipping</a></li>
+              <li><a href="#">returns</a></li>
+              <li><a href="#">order status</a></li>
+              <li><a href="#">payment options</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+              <h4>Our websites</h4>
+              <ul>
+                <li><a href="#">Files Editor</a></li>
+                <li><a href="#">Video Editor</a></li>
+                <li><a href="#">Picture Editor</a></li>
+                <li><a href="#">other</a></li>
+              </ul>
+            </div>
+
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </footer>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+    // Coding By CodingNepal codingnepalweb.com
+const urlInput = document.querySelector("input" );
+const downloadBtn = document.querySelector("button");
+
+downloadBtn.addEventListener("click", async () => {
+    try {
+        const response = await fetch(urlInput.value);
+        const file = await response.blob();
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(file);
+        link.download = new Date().getTime();
+        link.click();
+    }catch(error) {
+        alert("Failed to download the file!");
+    }
+});
+</script>
+
+
+</body>
+</html>

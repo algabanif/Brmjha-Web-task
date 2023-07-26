@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EasyTasks</title>
+
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Wix+Madefor+Display:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+
+        body{
+            font-family: 'Open Sans', sans-serif;
+            background-color: #fff;
+            height: 1000px;
+            overflow:scroll;
+        }
+
+
+        /* Header style */
+        .container-bar{
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .header {
+            position: static;
+            width: 100%;
+            background-color: #00428a;
+            color: #ffffff;
+            padding: 0.7rem;
+            position: flex;
+        }
+
+        .header .container-bar{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+        }
+
+        .header h2{
+            color: #ffffff;
+            font-weight: 800;
+        }
+
+        .header img{
+            margin-right: 20px;
+        }
+
+        .header a{
+            text-decoration: none;
+        }
+
+        /* End Header style */
+
+
+        /* Navpar */
+        .topnav {
+            overflow: hidden;
+            background-color: #0b6bd3;
+        }
+        
+        /* Style the links inside the navigation bar */
+        .topnav a {
+            float: left;
+            display: block;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        
+        /* Change the color of links on hover */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        /* Style the "active" element to highlight the current page */
+        .topnav a.active {
+            background-color: #3f6ec4;
+            color: white;
+        }
+        
+        /* Style the search box inside the navigation bar */
+        .topnav input[type=text] {
+            float: right;
+            padding: 6px;
+            border: none;
+            margin-top: 8px;
+            margin-right: 16px;
+            font-size: 17px;
+        }
+        
+
+        /* About */
+        .about{
+            width: 50%;
+            text-align: center;
+            margin: auto;
+            margin-top: 60px;
+            margin-bottom: 100px;
+        }
+
+        .convertSection{
+            height: 300px;
+            margin-top: 50px;
+        }
+
+
+
+        .container {
+        margin: auto;
+        width: 20%;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        border-radius: 5px;
+        background-color: #3f6ec4;
+        }
+
+        canvas{
+            width:0px;
+        }
+        .custom-file-input {
+            display: flex;
+            padding: 4px 12px;
+            width: 100%;
+            height: 30px;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background-color: #ffffff;
+            color: black;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        #outputFormat {
+            font-size: 14px;
+            padding: 4px 12px;
+            border:1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 30px;
+        }
+        span{
+            color: white;
+        }
+
+
+
+
+        
+
+        /* Footer */
+        .footer {
+            margin-top: 50px;
+            background-color: #00428a;
+            padding: 70px 0;
+        }
+
+        .footer-container {
+            max-width: 1170px;
+            margin: auto;
+        }
+        .footer-row{
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        .footer-col{
+            width: 25%;
+            padding: 0 15px;
+        }
+
+        .footer ul{
+            list-style: none;
+        }
+
+        .footer-col h4{
+            font-size: 18px;
+            color: #fff;
+            text-transform: capitalize;
+            margin-bottom: 30px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .footer-col h4::before{
+            content : '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: #fff;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child){
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a{
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #ffffff;
+            display: block;
+            transition: all 0.3s ease;
+
+        }
+
+        .footer-col ul li a:hover{
+            color: #ffffff;
+            padding-left: 10px;
+        }
+
+        .footer-col .social-links a{
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: #a2b1bb;
+            margin-right: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 1s ease;
+
+        }
+
+        .footer-col .social-links a:hover{
+            color: #84a4f5;
+            background-color: #fff;
+        }
+
+
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <nav class="header">
+        <div class="container-bar">
+           <img src="/assets/img/logo.png" style="max-width: 50px;">
+           <a href="../index.html"><h2> EasyTask </h2></a>
+        </div>
+    </nav>
+
+    <!-- category  -->
+    <div class="topnav">
+        <a class="active" href="../index.html">Home</a>
+        <a href="#about">Account</a>
+        <a href="#contact">Contact</a>
+        <input type="text" placeholder="Search..">
+    </div>
+
+     <!-- About -->
+     <div class="aboutSection">
+        <div class="about">
+             <h2>Let your Tasks Easier
+            </h2>
+             <h4>
+                versatile platform that provides a range of valuable tools for managing different types of media files. With features that include downloading videos, files, and photos from any website, converting file types and picture formats, reducing file size, and removing backgrounds from photos, your website offers a convenient and user-friendly experience for people who need to work with media files. Whether users need to convert a file for a specific application or remove the background from an image for a project, your website can help them accomplish their goals quickly and easily. With its intuitive interface and powerful tools, your website is a valuable resource for anyone who needs to manage and manipulate media files.
+ 
+             </h4>
+         </div>
+    </div>
+
+    <div class="convertSection">
+        <div class="container">
+            <canvas id="canvas"></canvas>
+            <div>
+                <span>Convert To : </span>
+                <select id="outputFormat">
+                    <option value="image/png">PNG</option>
+                    <option value="image/jpeg">JPEG</option>
+                    <option value="image/webp">WebP</option>
+                </select>
+            </div>
+            <input type="file" id="imageInput" accept="image/*" style="display: none;">
+            <label for="imageInput" class="custom-file-input">Select Image</label>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-row">
+
+            <div class="footer-col">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">our services</a></li>
+                <li><a href="#">privacy policy</a></li>
+                <li><a href="#">affiliate program</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4>get help</h4>
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">shipping</a></li>
+                <li><a href="#">returns</a></li>
+                <li><a href="#">order status</a></li>
+                <li><a href="#">payment options</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Our websites</h4>
+                <ul>
+                  <li><a href="#">Files Editor</a></li>
+                  <li><a href="#">Video Editor</a></li>
+                  <li><a href="#">Picture Editor</a></li>
+                  <li><a href="#">other</a></li>
+                </ul>
+              </div>
+
+            <div class="footer-col">
+              <h4>follow us</h4>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+
+    <script src="/assets/js/convertPic.js"></script>
+  </body>
+</html>

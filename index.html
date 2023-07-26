@@ -1,877 +1,384 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>EasyTasks</title>
+<html lang="en">
 
-        <!-- Basic -->
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        <!-- Mobile Metas -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>EasyTasks</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-        <!-- Site Metas -->
-        <meta name="keywords" content="" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-        <!-- fonts style -->
-        <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        
-        <!-- Custom styles for this template -->
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Wix+Madefor+Display:wght@500&display=swap');
-            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
 
-            *{
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Poppins';
-            }
+<body>
 
-            body{
-                font-family: 'Poppins', sans-serif;
-                background-color: #fff;
-                height: 1000px;
-                overflow:scroll;
-            }
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex justify-content-between">
 
-
-
-            /* Header style */
-            .container-bar{
-                width: 100%;
-                margin: 0 auto;
-            }
-
-            .header {
-                position: static;
-                width: 100%;
-                background-color: #ffffffb4;
-                color: #3b4db1;
-                padding: 0.7rem;
-                position: flex;
-            }
-
-            .header .container-bar{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 10px;
-            }
-            .header h2{
-                color: #1c1c29;
-                font-weight: 700;
-            }
-
-            .header img{
-                margin-right: 20px;
-                margin-top: 6px;
-            }
-
-            .header a{
-                text-decoration: none;
-            }
-
-            /* End Header style */
-
-
-
-
-            /* Navpar */
-            .topnav {
-                font-family: 'Poppins'!important;
-                overflow: hidden;
-                background-color: #d6d7d838;
-            }
-            
-            /* Style the links inside the navigation bar */
-            .topnav a {
-                float: left;
-                display: block;
-                color: black;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-                font-size: 17px;
-            }
-            
-            /* Change the color of links on hover */
-            .topnav a:hover {
-                background-color: #ddd;
-                color: black;
-            }
-            
-            /* Style the "active" element to highlight the current page */
-            .topnav a.active {
-                background-color: #ffffff;
-                color: rgb(0, 0, 0);
-            }
-            
-            /* Style the search box inside the navigation bar */
-            .topnav input[type=text] {
-                float: right;
-                padding: 6px;
-                border: none;
-                margin-top: 8px;
-                margin-right: 16px;
-                font-size: 17px;
-            }
-            
-            
-
-            /* About */
-            .about{
-                font-family: 'Poppins'!important;
-                width: 30%;
-                text-align:left;
-                margin-left: 300px;
-                margin-top: 60px;
-                margin-bottom: 100px;
-            }
-
-            .about h2{
-            font-size: 70px;
-            }
-
-            .about h4{
-            font-size: 21px;
-            margin: 10px 0 30px;
-            }
-
-            .introImg{
-            width: 500px;
-            position: absolute;
-            top: 230px;
-            right: 18%;
-            }
-
-
-
-
-
-
-            form{
-                margin: 20px 0 27px;
-            }
-
-            form input{
-                width: 100%;
-                height: 60px;
-                outline: none;
-                padding: 0 17px;
-                font-size: 19px;
-                border-radius: 5px;
-                border: 1px solid #b3b2b2;
-                transition: 0.1s ease;
-            }
-            form input::placeholder{
-                color: #b3b2b2;
-            }
-            form input:focus{
-                box-shadow: 0 3px 6px rgba(0,0,0,0.13);
-            }
-            form button{
-                width: 100%;
-                border: none;
-                opacity: 0.7;
-                outline: none;
-                color: #fff;
-                cursor: pointer;
-                font-size: 17px;
-                margin-top: 20px;
-                padding: 15px 0;
-                border-radius: 5px;
-                pointer-events: none;
-                background: #6b212a;
-                transition: opacity 0.15s ease;
-            }
-            form input:valid ~ button{
-                opacity: 1;
-                pointer-events: auto;
-            }
-
-
-
-
-
-
-
-
-
-
-
-
-            ::selection{
-            color: #fff;
-            background: #828283;
-            }
-            .wrapper{
-                margin: auto;
-                margin-top: 100px;
-                margin-bottom: 100px;
-            width: 50%;
-            background: #fff;
-            border-radius: 5px;
-            padding: 30px;
-            box-shadow: 7px 7px 12px rgba(0,0,0,0.05);
-            }
-            .wrapper header{
-            color: #7d7d80;
-            font-size: 27px;
-            font-weight: 600;
-            text-align: center;
-            }
-            .wrapper form{
-            height: 167px;
-            display: flex;
-            cursor: pointer;
-            margin: 30px 0;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            border-radius: 5px;
-            border: 2px dashed #7d7d80;
-            }
-            form :where(i, p){
-            color: #7d7d80;
-            }
-            form i{
-            font-size: 50px;
-            }
-            form p{
-            margin-top: 15px;
-            font-size: 16px;
-            }
-            section .row{
-            margin-bottom: 10px;
-            background: #eceff1;
-            list-style: none;
-            padding: 15px 20px;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            }
-            section .row i{
-            color: #666b77;
-            font-size: 30px;
-            }
-            section .details span{
-            font-size: 14px;
-            }
-            .progress-area .row .content{
-            width: 100%;
-            margin-left: 15px;
-            }
-            .progress-area .details{
-            display: flex;
-            align-items: center;
-            margin-bottom: 7px;
-            justify-content: space-between;
-            }
-            .progress-area .content .progress-bar{
-            height: 6px;
-            width: 100%;
-            margin-bottom: 4px;
-            background: #fff;
-            border-radius: 30px;
-            }
-            .content .progress-bar .progress{
-            height: 100%;
-            width: 0%;
-            background: #000000;
-            border-radius: inherit;
-            }
-            .uploaded-area{
-            max-height: 232px;
-            overflow-y: scroll;
-            }
-            .uploaded-area.onprogress{
-            max-height: 150px;
-            }
-            .uploaded-area::-webkit-scrollbar{
-            width: 0px;
-            }
-            .uploaded-area .row .content{
-            display: flex;
-            align-items: center;
-            }
-            .uploaded-area .row .details{
-            display: flex;
-            margin-left: 15px;
-            flex-direction: column;
-            }
-            .uploaded-area .row .details .size{
-            color: #404040;
-            font-size: 11px;
-            }
-            .uploaded-area i.fa-check{
-            font-size: 16px;
-            }
-
-
-
-
-
-
-
-
-
-
-
-            /* Tools */
-
-            .tools {
-                display: flex;
-                -ms-flex-align: center;
-                align-items: center;
-                -ms-flex-pack: center;
-                justify-content: center;
-                position: relative;
-                -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-                padding: 0 68px 42px
-            }
-
-
-            .tools__container {
-                background: #fff;
-                border-left: 1px solid #f6f6f8;
-                border-top: 1px solid #f6f6f8;
-                display: -ms-flexbox;
-                display: flex;
-                width: 100%;
-                -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-                position: relative;
-                -webkit-box-shadow: 0 2px 10px 0 rgba(0,0,0,.1);
-                box-shadow: 0 2px 10px 0 rgba(0,0,0,.1)
-            }
-
-            .tools__item {
-                -ms-flex: 0 0 16.666%;
-                flex: 0 0 16.666%;
-                color: #383e45;
-                border-right: 1px solid #f6f6f8;
-                border-bottom: 1px solid #f6f6f8;
-                position: relative;
-                overflow: hidden;
-                -webkit-transition: all .4s ease-out;
-                -o-transition: all .4s ease-out;
-                transition: all .4s ease-out;
-                z-index: 1
-            }
-
-            .tools__item svg {
-                width: 50px;
-                height: 50px
-            }
-
-
-            .tools__item a {
-                display: block;
-                width: 100%;
-                height: 100%;
-                padding: 32px;
-                color: #383e45;
-                position: relative;
-                z-index: 2
-            }
-
-            .tools__item__icon,.tools__item h3 {
-                margin-bottom: 12px
-            }
-
-            .tools__item h3 {
-                font-size: 20px;
-                font-weight: 600;
-                line-height: 30px;
-                letter-spacing: 0;
-                color: #383e45;
-                margin-bottom: 9px
-            }
-
-
-
-            .tools__item__content {
-                font-size: 12px;
-                line-height: 16px;
-                color: #626870
-            }
-
-            .tools__item__content p {
-                letter-spacing: .5px;
-                font-size: 12px;
-                line-height: 18px;
-                color: #626870
-            }
-
-            .tools__item:after {
-                -webkit-transform: translateX(30%) skew(-30deg);
-                transform: translateX(30%) skew(-30deg);
-                opacity: 0;
-                width: 120%
-            }
-
-            .tools__item svg {
-                -webkit-transition: none;
-                -o-transition: none;
-                transition: none
-            }
-
-            .tools__item:hover {
-                z-index: 999;
-                background: #f6f6f8
-            }
-
-            .tools__item:hover h3 {
-                color: #161616
-            }
-
-            .tools__item:hover svg {
-                -webkit-transform: scale(1.1);
-                transform: scale(1.1)
-            }
-
-            .tools__item:hover p {
-                color: #383e45
-            }
-
-            .tools-mini {
-                margin-top: 12px;
-                margin-bottom: 32px
-            }
-
-            .tools-mini .title2 {
-                text-align: center
-            }
-
-            .tools-list {
-                display: -ms-flexbox;
-                display: flex;
-                -ms-flex-pack: center;
-                justify-content: center
-            }
-
-            .tools-list .tools-list__item {
-                display: block;
-                width: 60px;
-                height: 60px;
-                margin: 6px
-            }
-
-            .tools-list .tools-list__item a {
-                display: -ms-flexbox;
-                display: flex;
-                -ms-flex-pack: center;
-                justify-content: center;
-                -ms-flex-align: center;
-                align-items: center;
-                width: 100%;
-                height: 100%;
-                -webkit-transition: all .4s ease-in;
-                -o-transition: all .4s ease-in;
-                transition: all .4s ease-in;
-                border-radius: 100%
-            }
-
-            .tools-list .tools-list__item a svg {
-                width: 50px
-            }
-
-            .tools-list .tools-list__item a:hover .zone-white {
-                fill: #fff
-            }
-
-            .tools-list .tools-list__item a:hover .zone-dark {
-                fill: #ff6a58
-            }
-
-            .tools-list .tools-list__item a:hover .zone-light {
-                fill: #fff
-            }
-
-            .tools-list .tools-list__item a:hover .zone-black {
-                fill: #e5322d
-            }
-
-            /* End Tools */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            /* Footer */
-            .footer {
-                background-color: #00428a;
-                padding: 70px 0;
-            }
-
-            .footer-container {
-                max-width: 1170px;
-                margin: auto;
-            }
-            .footer-row{
-                display: flex;
-                flex-wrap: wrap;
-                list-style: none;
-            }
-
-            .footer-col{
-                width: 25%;
-                padding: 0 15px;
-            }
-
-            .footer ul{
-                list-style: none;
-            }
-
-            .footer-col h4{
-                font-size: 18px;
-                color: #000000;
-                text-transform: capitalize;
-                margin-bottom: 30px;
-                font-weight: 500;
-                position: relative;
-            }
-
-            .footer-col h4::before{
-                content : '';
-                position: absolute;
-                left: 0;
-                bottom: -10px;
-                background-color: #000000;
-                height: 2px;
-                box-sizing: border-box;
-                width: 50px;
-            }
-
-            .footer-col ul li:not(:last-child){
-                margin-bottom: 10px;
-            }
-
-            .footer-col ul li a{
-                font-size: 16px;
-                text-transform: capitalize;
-                color: #000000;
-                text-decoration: none;
-                font-weight: 300;
-                color: #555454;
-                display: block;
-                transition: all 0.3s ease;
-
-            }
-
-            .footer-col ul li a:hover{
-                color: #080707;
-                padding-left: 10px;
-            }
-
-            .footer-col .social-links a{
-                display: inline-block;
-                height: 40px;
-                width: 40px;
-                background-color: rgb(255, 255, 255, 0.2);
-                margin-right: 0 10px 10px 0;
-                text-align: center;
-                line-height: 40px;
-                border-radius: 50%;
-                color: #020101;
-                transition: all 1s ease;
-
-            }
-
-            .footer-col .social-links a:hover{
-                color: #24262b;
-                background-color: #fff;
-            }
-
-            
-            #hero{
-                margin-top: 50px;
-                margin-bottom: 50px;
-            }
-
-
-
-
-
-        </style>
-
-
-    </head>
-    <body>
-
-        <!-- Header -->
-        <nav class="header">
-            <div class="container-bar">
-               <img src="/public/img/Logo.png" style="max-width: 40px;">
-               <a href="index.html"><h2> EasyTasks </h2></a>
-            </div>
-      </nav>
-
-      <!-- category  -->
-      <div class="topnav">
-        <a class="active" href="/view/index.html">Home</a>
-        <a href="#about">Account</a>
-        <a href="#contact">Contact</a>
-        <input type="text" placeholder="Search..">
+      <div class="logo">
+        <!-- Uncomment below if you prefer to use an text logo -->
+        <!-- <h1><a href="index.html">NewBiz</a></h1> -->
+        <a href="index.html"><img src="assets/img/LogoTitle.png" alt="" class="img-fluid"></a>
       </div>
 
-      <!-- About -->
-      <section id="hero" class="d-flex align-items-center">
-        <div class="container">
-          <div class="row" style="background-color: #d6d7d838;">
-            <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" >
-              <h1>Let your <br> Tasks Easier</h1>
-              <h3>The website is a versatile platform that provides various tools for managing media files. 
-                It offers a user-friendly experience for people who need to work with media files, 
-                and it can help users accomplish their goals quickly and easily.
-            </h3>
-              <div class="d-flex justify-content-center justify-content-lg-start">
-              </div>
-            </div>
-            <div class="col-lg-6 order-1 order-lg-2 hero-img aos-init aos-animate" data-aos="zoom-in" data-aos-delay="200">
-              <img src="/public/img/undraw_completed_tasks_vs6q (1).svg" class="img-fluid animated" alt="" style="width: 300px; display: -webkit-box; margin-left: auto">
-            </div>
-          </div>
-        </div>
-      </section>
-    
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-      <div class="tools">
-        <div class="tools__container">
-            <div class="tools__item">
-                <a href="/view/pdfToPic.html" title="Merge PDF">
-                    <div class="tools__item__icon">
-                    </div>
-                    <h3>PDF TO PIC</h3>
-                    <div class="tools__item__content">
-                        <p>Easily convert your PDF pages any page in your pdf to picture</p>
-                    </div>
-                </a>
-            </div>
-            <div class="tools__item">
-                <a href="/view/picToPDF.html" title="Split PDF">
-                    <div class="tools__item__icon">
-                    </div>
-                    <h3>PIC TO PDF</h3>
-                    <div class="tools__item__content">
-                        <p>Easily convert your pictures into new pdf pages</p>
-                    </div>
-                </a>
-            </div>
-            <div class="tools__item">
-                <a href="/view/convertPic.html" title="Compress PDF">
-                    <div class="tools__item__icon">
-                    </div>
-                    <h3> Picture type</h3>
-                    <div class="tools__item__content">
-                        <p>Easily convert your pictures to PNG, JPEG and WebP</p>
-                    </div>
-                </a>
-            </div>
-            <div class="tools__item">
-                <a href="/view/ResizeReduce.html" title="PDF to Word">
-                    <div class="tools__item__icon">
-                    </div>
-                    <h3>Resize and Reduce</h3>
-                    <div class="tools__item__content">
-                        <p>Easily resize your pictures and reduce the picture size</p>
-                    </div>
-                </a>
-            </div>
-            <div class="tools__item">
-                <a href="/view/picEditor.html" title="PDF to Powerpoint">
-                    <div class="tools__item__icon">
-                    </div>
-                    <h3>Picture Editor</h3>
-                    <div class="tools__item__content">
-                        <p>Easily Edit your picture Brightness, Saturation, Inversion and Grayscale</p>
-                    </div>
-                </a>
-            </div>
-            <div class="tools__item">
-                <a href="/pdf_to_excel" title="PDF to Excel">
-                    <div class="tools__item__icon">
-                    </div>
-                    <h3>Download Picture</h3>
-                    <div class="tools__item__content">
-                        <p>Pull data straight from PDFs into Excel spreadsheets in a few short seconds.</p>
-                    </div>
-                </a>
-            </div>
-            <div class="tools__item">
-                <div class="badge badge--new">Still working on!</div>
-                <a href="/word_to_pdf" title="Word to PDF">
-                    <div class="tools__item__icon">
-                    </div>
-                    <h3>PNG to HEIC</h3>
-                    <div class="tools__item__content">
-                        <p>Make DOC and DOCX files easy to read by converting them to PDF.</p>
-                    </div>
-                </a>
-            </div>
-            <div class="tools__item">
-                <div class="badge badge--new">Still working on!</div>
-                <a href="/powerpoint_to_pdf" title="Powerpoint to PDF">
-                    <div class="tools__item__icon">
-                    </div>
-                    <h3>Powerpoint to PDF</h3>
-                    <div class="tools__item__content">
-                        <p>Make PPT and PPTX slideshows easy to view by converting them to PDF.</p>
-                    </div>
-                </a>
-            </div>
-            <div class="tools__item">
-                <div class="badge badge--new">Still working on!</div>
-                <a href="/excel_to_pdf" title="Excel to PDF">
-                    <div class="tools__item__icon">
-                    </div>
-                    <h3>Excel to PDF</h3>
-                    <div class="tools__item__content">
-                        <p>Make EXCEL spreadsheets easy to read by converting them to PDF.</p>
-                    </div>
-                </a>
-            </div>
-            <div class="tools__item">
-                <div class="badge badge--new">Still working on!</div>
-                <a href="/html-to-pdf" title="HTML to PDF">
-                    <div class="tools__item__icon">
-                    </div>
-                    <h3>HTML to PDF</h3>
-                    <div class="tools__item__content">
-                        <p>Convert webpages in HTML to PDF. Copy and paste the URL of the page you want and convert it to PDF with a click.</p>
-                    </div>
-                </a>
-            </div>
-            <div class="tools__item">
-                <div class="badge badge--new">Still working on!</div>
-                <a href="/unlock_pdf" title="Unlock PDF">
-                    <div class="tools__item__icon">
-                    </div>
-                    <h3>Unlock PDF</h3>
-                    <div class="tools__item__content">
-                        <p>Remove PDF password security, giving you the freedom to use your PDFs as you want.</p>
-                    </div>
-                </a>
-            </div>
-            <div class="tools__item">
-                <div class="badge badge--new">Still working on!</div>
-                <a href="/ocr-pdf" title="OCR PDF">
-                    <div class="tools__item__icon">
-                    </div>
-                    <h3>OCR PDF</h3>
-                    <div class="tools__item__content">
-                        <p>Easily convert scanned PDF into searchable and selectable documents.</p>
-                    </div>
-                </a>
-            </div>
-        </div>
     </div>
+  </header><!-- #header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="clearfix">
+    <div class="container" data-aos="fade-up">
+
+      <div class="hero-img" data-aos="zoom-out" data-aos-delay="200">
+        <img src="assets/img/hero-img.svg" alt="" class="img-fluid">
+      </div>
+
+      <div class="hero-info" data-aos="zoom-in" data-aos-delay="100">
+        <h2>We Let<br>Your Tasks<br>Easier</h2>
+        <div>
+          <a href="#about" class="btn-get-started scrollto">Get Started</a>
+          <a href="#services" class="btn-services scrollto">Our Services</a>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about">
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h3>About Us</h3>
+          <p>Welcome to our website! We are a team of professionals who have created this platform to help users manage and manipulate their media files with ease. Our website offers a range of valuable tools and features, including the ability to download videos, files, and photos from any website, convert file types and picture formats, reduce file size, and remove backgrounds from photos.
+            We understand how important it is to have a reliable and convenient tool for managing media files, which is why we have designed our website to be user-friendly and intuitive. Whether you're a student, a professional, or just someone who needs to manage media files on a daily basis, our website can help you accomplish your goals quickly and easily. Thank you for choosing our website for your media file needs!
+          </p>
+        </header>
 
 
+        <div class="row about-extra">
+          <div class="col-lg-6" data-aos="fade-right">
+            <img src="assets/img/about-extra-1.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-5 pt-lg-0" data-aos="fade-left">
+            <h4>Why you choose us?</h4>
+            <p>
+              The website is a versatile platform that provides various tools for managing media files. It offers a user-friendly experience for people who need to work with media files, and it can help users accomplish their goals quickly and easily.            </p>
+            <p>
+              User-friendly experience suggests the interface is clean, intuitive, and easy to navigate. Features would be accessible without a steep learning curve. This allows users to be productive faster.            </p>
+          </div>
+        </div>
 
+        <div class="row about-extra">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
+            <img src="assets/img/about-extra-2.svg" class="img-fluid" alt="">
+          </div>
 
-      
-       <!-- Footer -->
-      <footer class="footer">
-        <div class="footer-container">
-          <div class="footer-row">
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-right">
+            <h4>How it's going?</h4>
+            <p>
+              We offer a variety of valuable features and tools that can help users manage and manipulate their media files. Being able to download videos, files, and photos from any website is a particularly useful feature, as it saves users the hassle of having to search for and download media files from multiple sources.             </p>
+            <p>
+              Additionally, the ability to convert file types and picture formats, reduce file size, and remove backgrounds from photos is very valuable, as it allows users to customize their media files to suit their specific needs.            </p>
+            <p>
+              Overall, the website is offering a wide range of useful features and tools that can help users accomplish their daily tasks related to media files quickly and easily.            </p>
+          </div>
 
-            <div class="footer-col">
-              <h4>Company</h4>
-              <ul>
-                <li><a href="#">about us</a></li>
-                <li><a href="#">our services</a></li>
-                <li><a href="#">privacy policy</a></li>
-                <li><a href="#">affiliate program</a></li>
-              </ul>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h3>Services</h3>
+          <p>These services include.</p>
+        </header>
+
+        <div class="row justify-content-center">
+
+          <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box">
+              <div class="icon"><i class="bi bi-briefcase" style="color: #ff689b;"></i></div>
+              <h4 class="title"><a href="services/pdfToPic.html">PDF TO PIC</a></h4>
+              <p class="description">Easily convert your PDF pages any page in your pdf to picture</p>
             </div>
-
-            <div class="footer-col">
-              <h4>get help</h4>
-              <ul>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">shipping</a></li>
-                <li><a href="#">returns</a></li>
-                <li><a href="#">order status</a></li>
-                <li><a href="#">payment options</a></li>
-              </ul>
+          </div>
+          <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="200">
+            <div class="box">
+              <div class="icon"><i class="bi bi-card-checklist" style="color: #e9bf06;"></i></div>
+              <h4 class="title"><a href="services/picToPDF.html">PIC TO PDF</a></h4>
+              <p class="description">Easily convert your pictures into new pdf pages</p>
             </div>
+          </div>
 
-            <div class="footer-col">
-                <h4>Our websites</h4>
-                <ul>
-                  <li><a href="#">Files Editor</a></li>
-                  <li><a href="#">Video Editor</a></li>
-                  <li><a href="#">Picture Editor</a></li>
-                  <li><a href="#">other</a></li>
-                </ul>
+          <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box">
+              <div class="icon"><i class="bi bi-bar-chart" style="color: #3fcdc7;"></i></div>
+              <h4 class="title"><a href="services/convertPic.html">Change Picture Type</a></h4>
+              <p class="description">Easily convert your pictures to PNG, JPEG and WebP</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="200">
+            <div class="box">
+              <div class="icon"><i class="bi bi-binoculars" style="color:#41cf2e;"></i></div>
+              <h4 class="title"><a href="services/ResizeReduce.html">Resize and Reduse</a></h4>
+              <p class="description">Easily resize your pictures and reduce the picture size</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box">
+              <div class="icon"><i class="bi bi-brightness-high" style="color: #d6ff22;"></i></div>
+              <h4 class="title"><a href="services/picEditor.html">Picture Editor</a></h4>
+              <p class="description">Easily Edit your picture Brightness, Saturation, Inversion and Grayscale</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="200">
+            <div class="box">
+              <div class="icon"><i class="bi bi-calendar4-week" style="color: #4680ff;"></i></div>
+              <h4 class="title"><a href="services/RemoveBg.html">Download Picutre By link</a></h4>
+              <p class="description">Pull data straight from PDFs into Excel spreadsheets in a few short seconds.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h3>Our Team</h3>
+          <p>The happiness blooms from within</p>
+        </div>
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-3 col-md-6" data-aos="zoom-out" data-aos-delay="100">
+            <div class="member">
+              <img src="assets/img/Men.png" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Faisal Algbani</h4>
+                  <span>Full stack Developer</span>
+                  <div class="social">
+                    <a href="https://twitter.com/F_Moh5"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.instagram.com/fu3l.z/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/faisal-algabani-b68188203/"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
               </div>
+            </div>
+          </div>
 
-            <div class="footer-col">
-              <h4>follow us</h4>
-              <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <div class="col-lg-3 col-md-6" data-aos="zoom-out" data-aos-delay="200">
+            <div class="member">
+              <img src="assets/img/Lady.png" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Meteabh Aldawasri</h4>
+                  <span>Full stack Developer</span>
+                  <div class="social">
+                    <a href="https://twitter.com/ii51tr?s=21&t=hX0JUhp2N_QRsNpsjZ3R7A"><i class="bi bi-twitter"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/meteabah-aldawsari-420630208"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="zoom-out" data-aos-delay="300">
+            <div class="member">
+              <img src="assets/img/Lady.png" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Nema Alnajjar</h4>
+                  <span>UX/UI Design</span>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </footer>
 
-      <script src="/public/script.js"></script>
-      
-    </body>
+      </div>
+    </section><!-- End Team Section -->
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="section-bg">
+
+    </section><!-- End Clients Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact">
+      <div class="container-fluid" data-aos="fade-up">
+
+        <div class="section-header">
+          <h3>Contact Us</h3>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="map mb-4 mb-lg-0">
+              <iframe src="https://www.google.com/maps/place/%D9%85%D9%87%D9%85%D8%A9+%D8%A7%D9%84%D9%87%D8%B1%D9%88%D8%A8%D8%8C+%D8%B7%D8%B1%D9%8A%D9%82+%D8%A7%D9%84%D9%85%D9%84%D9%83+%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%B9%D8%B2%D9%8A%D8%B2%D8%8C+%D8%A7%D9%84%D9%88%D8%B1%D9%88%D8%AF%D8%8C+%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6+12252%E2%80%AD/@24.7232794,46.6873475,16z/data=!4m9!1m2!2m1!1z2KjYsdmF2KzZhw!3m5!1s0x3e2f1eb5d8a1ace7:0xcd4ba103ee4a98cf!8m2!3d24.7265469!4d46.6898794!16s%2Fg%2F11fy4h4bmb" frameborder="0" style="border:0; width: 100%; height: 340px;" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-md-5 info">
+                <i class="bi bi-geo-alt"></i>
+                <p>Saudi Arabia, Riyadh</p>
+              </div>
+              <div class="col-md-4 info">
+                <i class="bi bi-envelope"></i>
+                <p>algabanif@gmail.com</p>
+              </div>
+              <div class="col-md-3 info">
+                <i class="bi bi-phone"></i>
+                <p>+966 508399719</p>
+              </div>
+            </div>
+
+            <div class="form">
+              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <div class="row">
+                  <div class="form-group col-lg-6">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  </div>
+                  <div class="form-group col-lg-6 mt-3 mt-lg-0">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  </div>
+                </div>
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group mt-3">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                </div>
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                </div>
+                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-row">
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">privacy policy</a></li>
+            <li><a href="#">affiliate program</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">shipping</a></li>
+            <li><a href="#">returns</a></li>
+            <li><a href="#">order status</a></li>
+            <li><a href="#">payment options</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Our websites</h4>
+            <ul>
+              <li><a href="#">Files Editor</a></li>
+              <li><a href="#">Video Editor</a></li>
+              <li><a href="#">Picture Editor</a></li>
+              <li><a href="#">other</a></li>
+            </ul>
+          </div>
+
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
 
 </html>
