@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    font-family: 'Poppins';
 }
 
 body{
@@ -36,8 +36,8 @@ body{
 .header {
     position: static;
     width: 100%;
-    background-color: #d6d7d8;
-    color: #000000;
+    background-color: #000000b4;
+    color: #ffffff;
     padding: 0.7rem;
     position: flex;
 }
@@ -48,14 +48,14 @@ body{
     justify-content: center;
     margin: 10px;
 }
-
 .header h2{
-    color: #000000;
+    color: #ffffff;
     font-weight: 700;
 }
 
 .header img{
     margin-right: 20px;
+    margin-top: 6px;
 }
 
 .header a{
@@ -74,6 +74,7 @@ body{
 
 /* Navpar */
 .topnav {
+    font-family: 'Poppins'!important;
     overflow: hidden;
     background-color: #e9e9e9;
   }
@@ -97,8 +98,8 @@ body{
   
   /* Style the "active" element to highlight the current page */
   .topnav a.active {
-    background-color: #373838;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
   }
   
   /* Style the search box inside the navigation bar */
@@ -115,17 +116,39 @@ body{
 
 /* About */
 .about{
-    width: 50%;
-    text-align: center;
-    margin: auto;
+    font-family: 'Poppins'!important;
+    width: 30%;
+    text-align:left;
+    margin-left: 300px;
     margin-top: 60px;
     margin-bottom: 100px;
 }
+
+.about h2{
+  font-size: 70px;
+}
+
+.about h4{
+  font-size: 21px;
+  margin: 10px 0 30px;
+}
+
+.introImg{
+  width: 500px;
+  position: absolute;
+  top: 230px;
+  right: 18%;
+}
+
+
+
+
 
 
   form{
     margin: 20px 0 27px;
   }
+
   form input{
     width: 100%;
     height: 60px;
