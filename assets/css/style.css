@@ -1,11 +1,3 @@
-/**
-* Template Name: NewBiz
-* Updated: May 30 2023 with Bootstrap v5.3.0
-* Template URL: https://bootstrapmade.com/newbiz-bootstrap-business-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -46,6 +38,10 @@ h6 {
   padding: 0;
 }
 
+
+
+
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -78,6 +74,14 @@ h6 {
   visibility: visible;
   opacity: 1;
 }
+
+
+
+
+
+
+
+
 
 /*--------------------------------------------------------------
 # Header
@@ -119,6 +123,13 @@ h6 {
   padding: 0;
   max-height: 46px;
 }
+
+
+
+
+
+
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -338,6 +349,10 @@ h6 {
   display: block;
 }
 
+
+
+
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -449,12 +464,18 @@ h6 {
   color: #fff;
 }
 
+
+
+
+
+
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
 section {
   overflow: hidden;
 }
+
 
 /* Sections Header
 --------------------------------*/
@@ -490,6 +511,7 @@ section {
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
+
 .breadcrumbs {
   padding: 20px 0;
   background-color: #f5faff;
@@ -548,6 +570,7 @@ section {
     display: inline-block;
   }
 }
+
 
 /* About Us Section
 --------------------------------*/
@@ -774,293 +797,6 @@ section {
   color: #cce5ff;
 }
 
-/* Portfolio Section
---------------------------------*/
-#portfolio {
-  padding: 60px 0;
-  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
-}
-
-#portfolio #portfolio-flters {
-  padding: 0;
-  margin: 5px 0 35px 0;
-  list-style: none;
-  text-align: center;
-}
-
-#portfolio #portfolio-flters li {
-  cursor: pointer;
-  margin: 15px 15px 15px 0;
-  display: inline-block;
-  padding: 6px 20px;
-  font-size: 12px;
-  line-height: 20px;
-  color: #007bff;
-  border-radius: 50px;
-  text-transform: uppercase;
-  background: #ecf5ff;
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
-}
-
-#portfolio #portfolio-flters li:hover,
-#portfolio #portfolio-flters li.filter-active {
-  background: #007bff;
-  color: #fff;
-}
-
-#portfolio #portfolio-flters li:last-child {
-  margin-right: 0;
-}
-
-#portfolio .portfolio-item {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 30px;
-}
-
-#portfolio .portfolio-item .portfolio-wrap {
-  overflow: hidden;
-  position: relative;
-  border-radius: 6px;
-  margin: 0;
-}
-
-#portfolio .portfolio-item .portfolio-wrap:hover img {
-  opacity: 0.4;
-  transition: 0.3s;
-}
-
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  opacity: 0;
-  transition: 0.2s linear;
-}
-
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info h4 {
-  font-size: 22px;
-  line-height: 1px;
-  font-weight: 700;
-  margin-bottom: 14px;
-  padding-bottom: 0;
-}
-
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info h4 a {
-  color: #fff;
-}
-
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info h4 a:hover {
-  color: #007bff;
-}
-
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info p {
-  padding: 0;
-  margin: 0;
-  color: #e2effe;
-  font-weight: 500;
-  font-size: 14px;
-  text-transform: uppercase;
-}
-
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-preview,
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-details {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  width: 36px;
-  height: 36px;
-  background: #007bff;
-  border-radius: 50%;
-  margin: 10px 4px 0 4px;
-}
-
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-preview i,
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-details i {
-  font-size: 22px;
-  color: #fff;
-  line-height: 0;
-}
-
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-preview:hover,
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-details:hover {
-  background: #3395ff;
-}
-
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-preview:hover i,
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-details:hover i {
-  color: #fff;
-}
-
-#portfolio .portfolio-item .portfolio-wrap:hover {
-  background: #003166;
-}
-
-#portfolio .portfolio-item .portfolio-wrap:hover .portfolio-info {
-  opacity: 1;
-}
-
-/*--------------------------------------------------------------
-# Portfolio Details
---------------------------------------------------------------*/
-.portfolio-details {
-  padding-top: 40px;
-}
-
-.portfolio-details .portfolio-details-slider img {
-  width: 100%;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid #007bff;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #007bff;
-}
-
-.portfolio-details .portfolio-info {
-  padding: 30px;
-  box-shadow: 0px 0 30px rgba(40, 61, 80, 0.08);
-}
-
-.portfolio-details .portfolio-info h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-}
-
-.portfolio-details .portfolio-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.portfolio-details .portfolio-info ul li+li {
-  margin-top: 10px;
-}
-
-.portfolio-details .portfolio-description {
-  padding-top: 30px;
-}
-
-.portfolio-details .portfolio-description h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.portfolio-details .portfolio-description p {
-  padding: 0;
-}
-
-/* Testimonials Section
---------------------------------*/
-#testimonials {
-  padding: 60px 0;
-  box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
-}
-
-#testimonials .section-header {
-  margin-bottom: 40px;
-}
-
-#testimonials .testimonials-carousel,
-#testimonials .testimonials-slider {
-  overflow: hidden;
-}
-
-@media (max-width: 767px) {
-  #testimonials .testimonial-item {
-    text-align: center;
-  }
-}
-
-#testimonials .testimonial-item .testimonial-img {
-  width: 120px;
-  border-radius: 50%;
-  border: 4px solid #fff;
-  float: left;
-}
-
-@media (max-width: 767px) {
-  #testimonials .testimonial-item .testimonial-img {
-    float: none;
-    margin: auto;
-  }
-}
-
-#testimonials .testimonial-item h3 {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 10px 0 5px 0;
-  color: #111;
-  margin-left: 140px;
-}
-
-#testimonials .testimonial-item h4 {
-  font-size: 14px;
-  color: #999;
-  margin: 0 0 15px 0;
-  margin-left: 140px;
-}
-
-#testimonials .testimonial-item p {
-  font-style: italic;
-  margin: 0 0 15px 140px;
-}
-
-@media (min-width: 992px) {
-  #testimonials .testimonial-item p {
-    width: 80%;
-  }
-}
-
-@media (max-width: 767px) {
-
-  #testimonials .testimonial-item h3,
-  #testimonials .testimonial-item h4,
-  #testimonials .testimonial-item p {
-    margin-left: 0;
-  }
-}
-
-#testimonials .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-#testimonials .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid #007bff;
-}
-
-#testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #007bff;
-}
 
 /* Team Section
 --------------------------------*/
@@ -1139,38 +875,6 @@ section {
   margin: 0 2px;
 }
 
-/* Clients Section
---------------------------------*/
-#clients {
-  padding: 60px 0;
-  box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
-}
-
-#clients .clients-wrap {
-  border-top: 1px solid #d6eaff;
-  border-left: 1px solid #d6eaff;
-  margin-bottom: 30px;
-}
-
-#clients .client-logo {
-  padding: 64px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-right: 1px solid #d6eaff;
-  border-bottom: 1px solid #d6eaff;
-  overflow: hidden;
-  background: #fff;
-  height: 160px;
-}
-
-#clients .client-logo:hover img {
-  transform: scale(1.2);
-}
-
-#clients img {
-  transition: all 0.4s ease-in-out;
-}
 
 /* Contact Section
 --------------------------------*/
