@@ -10,16 +10,16 @@ help users manage and manipulate their media files with ease. Our website offers
 <img src="/assets/img/Homepage.png" style="width: 1000px;"><br/><br/><br/><br/>
 
 ## Login page
-<img src="/assets/img/feature1.png"  style="width: 600px;"><br/><br/><br/><br/>
+<img src="/assets/img/feature1.jpg"  style="width: 600px;"><br/><br/><br/><br/>
 
 ## Admin page
-<img src="/assets/img/feature2.png" style="width: 600px;"><br/><br/><br/><br/>
+<img src="/assets/img/feature2.jpg" style="width: 600px;"><br/><br/><br/><br/>
 
 ## Products page
-<img src="/assets/img/feature3.png" style="width: 600px;"><br/><br/><br/><br/>
+<img src="/assets/img/feature3.jpg" style="width: 600px;"><br/><br/><br/><br/>
 
 ## Add new product and edit page
-<img src="/assets/img/feature4.png" style="width: 600px;"><br/><br/><br/><br/>
+<img src="/assets/img/feature4.jpg" style="width: 600px;"><br/><br/><br/><br/>
 
 ## Search page
 <img src="/assets/img/searchproduct.png" style="width: 600px;"><br/><br/><br/><br/>
