@@ -1135,7 +1135,7 @@ section {
 
 #upload-button {
   color: white;
-  background-color: #0e5199a9;
+  background-color: #3498dbcc;
   border: none;
   border-radius: 6px;
   padding: 8px 20px;
@@ -1213,14 +1213,16 @@ section {
 }
 
 .move {
-  background-color: #0e5199a9;
+  background-color: #3498DB;
+  border-radius: 3px;
   border: none;
   color: white;
   padding: 5px;
 }
 
 .download{
-  background-color: #0e5199a9;
+  background-color: #3498DB;
+  border-radius: 3px;
   color: white;
   padding: 15px;
   text-decoration: none;
