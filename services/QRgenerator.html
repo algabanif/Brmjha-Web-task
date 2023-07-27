@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>EasyTasks</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  
+  <style>
+    .wrapper{
+      height: 265px;
+      max-width: 410px;
+      background: #fff;
+      border-radius: 7px;
+      padding: 20px 25px 0;
+      transition: height 0.2s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .wrapper.active{
+      height: 530px;
+    }
+    header h1{
+      font-size: 21px;
+      font-weight: 500;
+    }
+    header p{
+      margin-top: 5px;
+      color: #575757;
+      font-size: 16px;
+    }
+    .wrapper .form{
+      margin: 20px 0 25px;
+    }
+    .form :where(input, button){
+      width: 100%;
+      height: 55px;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      transition: 0.1s ease;
+    }
+    .form input{
+      font-size: 18px;
+      padding: 0 17px;
+      border: 1px solid #999;
+    }
+    .form input:focus{
+      box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+    }
+    .form input::placeholder{
+      color: #999;
+    }
+    .form button{
+      color: #fff;
+      cursor: pointer;
+      margin-top: 20px;
+      font-size: 17px;
+      background: #3498DB;
+    }
+    .qr-code{
+      opacity: 0;
+      display: flex;
+      padding: 33px 0;
+      border-radius: 5px;
+      align-items: center;
+      pointer-events: none;
+      justify-content: center;
+      border: 1px solid #ccc;
+    }
+    .wrapper.active .qr-code{
+      opacity: 1;
+      pointer-events: auto;
+      transition: opacity 0.5s 0.05s ease;
+    }
+    .qr-code img{
+      width: 170px;
+    }
+
+    @media (max-width: 430px){
+      .wrapper{
+        height: 255px;
+        padding: 16px 20px;
+      }
+      .wrapper.active{
+        height: 510px;
+      }
+      header p{
+        color: #696969;
+      }
+      .form :where(input, button){
+        height: 52px;
+      }
+      .qr-code img{
+        width: 160px;
+      }  
+    }
+  </style>
+  
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex justify-content-between">
+
+      <div class="logo">
+        <!-- Uncomment below if you prefer to use an text logo -->
+        <!-- <h1><a href="index.html">NewBiz</a></h1> -->
+        <a href="../index.html"><img src="../assets/img/LogoTitle.png" alt="" class="img-fluid"></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="../index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- #header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="clearfix">
+    <div class="d-flex" style="justify-content: center; text-align: center;" data-aos="fade-up">
+      <div class="hero-info" data-aos="zoom-in" data-aos-delay="100" >
+        <h2>We Let Your Tasks Easier</h2>
+      </div>
+
+    </div>
+  </section><!-- End Hero Section -->
+
+  <div class="wrapper" style="margin: auto; margin-bottom: 50px; margin-top: 100px;">
+    <header>
+      <h1>QR Code Generator</h1>
+      <p>Paste a url or enter text to create QR code</p>
+    </header>
+    <div class="form">
+      <input type="text" spellcheck="false" placeholder="Enter text or url">
+      <button>Generate QR Code</button>
+    </div>
+    <div class="qr-code">
+      <img src="" alt="qr-code">
+    </div>
+  </div>
+
+
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-row">
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">privacy policy</a></li>
+            <li><a href="#">affiliate program</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Our websites</h4>
+            <ul>
+              <li><a href="#">Files Editor</a></li>
+              <li><a href="#">Video Editor</a></li>
+              <li><a href="#">Picture Editor</a></li>
+              <li><a href="#">other</a></li>
+            </ul>
+          </div>
+
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+
+  <script>
+    
+    const fileInput = document.querySelector(".file-input"),
+        filterOptions = document.querySelectorAll(".filter button"),
+        filterName = document.querySelector(".filter-info .name"),
+        filterValue = document.querySelector(".filter-info .value"),
+        filterSlider = document.querySelector(".slider input"),
+        rotateOptions = document.querySelectorAll(".rotate button"),
+        previewImg = document.querySelector(".preview-img img"),
+        resetFilterBtn = document.querySelector(".reset-filter"),
+        chooseImgBtn = document.querySelector(".choose-img"),
+        saveImgBtn = document.querySelector(".save-img");
+
+        let brightness = "100", saturation = "100", inversion = "0", grayscale = "0";
+        let rotate = 0, flipHorizontal = 1, flipVertical = 1;
+
+        const loadImage = () => {
+            let file = fileInput.files[0];
+            if(!file) return;
+            previewImg.src = URL.createObjectURL(file);
+            previewImg.addEventListener("load", () => {
+                resetFilterBtn.click();
+                document.querySelector(".container").classList.remove("disable");
+            });
+        }
+
+        const applyFilter = () => {
+            previewImg.style.transform = `rotate(${rotate}deg) scale(${flipHorizontal}, ${flipVertical})`;
+            previewImg.style.filter = `brightness(${brightness}%) saturate(${saturation}%) invert(${inversion}%) grayscale(${grayscale}%)`;
+        }
+
+        filterOptions.forEach(option => {
+            option.addEventListener("click", () => {
+                document.querySelector(".active").classList.remove("active");
+                option.classList.add("active");
+                filterName.innerText = option.innerText;
+
+                if(option.id === "brightness") {
+                    filterSlider.max = "200";
+                    filterSlider.value = brightness;
+                    filterValue.innerText = `${brightness}%`;
+                } else if(option.id === "saturation") {
+                    filterSlider.max = "200";
+                    filterSlider.value = saturation;
+                    filterValue.innerText = `${saturation}%`
+                } else if(option.id === "inversion") {
+                    filterSlider.max = "100";
+                    filterSlider.value = inversion;
+                    filterValue.innerText = `${inversion}%`;
+                } else {
+                    filterSlider.max = "100";
+                    filterSlider.value = grayscale;
+                    filterValue.innerText = `${grayscale}%`;
+                }
+            });
+        });
+
+        const updateFilter = () => {
+            filterValue.innerText = `${filterSlider.value}%`;
+            const selectedFilter = document.querySelector(".filter .active");
+
+            if(selectedFilter.id === "brightness") {
+                brightness = filterSlider.value;
+            } else if(selectedFilter.id === "saturation") {
+                saturation = filterSlider.value;
+            } else if(selectedFilter.id === "inversion") {
+                inversion = filterSlider.value;
+            } else {
+                grayscale = filterSlider.value;
+            }
+            applyFilter();
+        }
+
+        rotateOptions.forEach(option => {
+            option.addEventListener("click", () => {
+                if(option.id === "left") {
+                    rotate -= 90;
+                } else if(option.id === "right") {
+                    rotate += 90;
+                } else if(option.id === "horizontal") {
+                    flipHorizontal = flipHorizontal === 1 ? -1 : 1;
+                } else {
+                    flipVertical = flipVertical === 1 ? -1 : 1;
+                }
+                applyFilter();
+            });
+        });
+
+        const resetFilter = () => {
+            brightness = "100"; saturation = "100"; inversion = "0"; grayscale = "0";
+            rotate = 0; flipHorizontal = 1; flipVertical = 1;
+            filterOptions[0].click();
+            applyFilter();
+        }
+
+        const saveImage = () => {
+            console.log("hello")
+            const canvas = document.createElement("canvas");
+            const ctx = canvas.getContext("2d");
+            canvas.width = previewImg.naturalWidth;
+            canvas.height = previewImg.naturalHeight;
+            
+            ctx.filter = `brightness(${brightness}%) saturate(${saturation}%) invert(${inversion}%) grayscale(${grayscale}%)`;
+            ctx.translate(canvas.width / 2, canvas.height / 2);
+            if(rotate !== 0) {
+                ctx.rotate(rotate * Math.PI / 180);
+            }
+            ctx.scale(flipHorizontal, flipVertical);
+            ctx.drawImage(previewImg, -canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);
+            
+            const link = document.createElement("a");
+            link.download = "image.jpg";
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+
+        filterSlider.addEventListener("input", updateFilter);
+        resetFilterBtn.addEventListener("click", resetFilter);
+        saveImgBtn.addEventListener("click", saveImage);
+        fileInput.addEventListener("change", loadImage);
+        chooseImgBtn.addEventListener("click", () => fileInput.click());
+
+    </script>
+</body>
+
+</html>

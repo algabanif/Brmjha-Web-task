@@ -1127,3 +1127,101 @@ section {
   margin-bottom: 50px;
 }
 
+
+
+/*--------------------------------------------------------------
+# Upload file --> pdf to photo
+--------------------------------------------------------------*/
+
+#upload-button {
+  color: white;
+  background-color: #0e5199a9;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 20px;
+  text-decoration:none;
+  cursor:pointer;
+  width: 250px;
+  display: block;
+  margin: 20px auto;
+}
+
+#file-to-upload {
+  display: none;
+}
+
+#pdf-main-container {
+  min-height: 200px;
+  width: 400px;
+  margin: 20px auto;
+}
+
+#pdf-loader {
+  display: none;
+  text-align: center;
+  color: #999999;
+  font-size: 13px;
+  line-height: 100px;
+  height: 100px;
+}
+
+#pdf-contents {
+  display: none;
+}
+
+#pdf-meta {
+  overflow: hidden;
+  margin: 0 0 20px 0;
+}
+
+#pdf-buttons {
+  float: left;
+}
+
+#page-count-container {
+  float: right;
+}
+
+#pdf-current-page {
+  display: inline;
+}
+
+#pdf-total-pages {
+  display: inline;
+}
+
+#pdf-canvas {
+  border: 1px solid #0e5199a9;
+  box-sizing: border-box;
+}
+
+#page-loader {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  display: none;
+  color: #999999;
+  font-size: 13px;
+}
+
+#download-image {
+  width: 150px;
+  display: block;
+  margin: 20px auto 0 auto;
+  font-size: 13px;
+  text-align: center;
+}
+
+.move {
+  background-color: #0e5199a9;
+  border: none;
+  color: white;
+  padding: 5px;
+}
+
+.download{
+  background-color: #0e5199a9;
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+}
