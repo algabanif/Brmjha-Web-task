@@ -7,7 +7,7 @@ help users manage and manipulate their media files with ease. Our website offers
 
 # And This some capture for out website 
 ## Home page
-<img src="/assets/img/Homepage.png" style="width: 600px;"><br/><br/><br/><br/>
+<img src="/assets/img/Homepage.png" style="width: 1000px;"><br/><br/><br/><br/>
 
 ## Login page
 <img src="/assets/img/feature1.png"  style="width: 600px;"><br/><br/><br/><br/>
