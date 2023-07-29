@@ -16,7 +16,7 @@ help users manage and manipulate their media files with ease. Our website offers
 - Nema Alnajjar
 <br><br>
 
-### And This some capture for out website 
+### And This some pictures for our website 
 
 #### Home page
 <img src="/assets/img/Homepage.png" style="width: 1000px;"><br/><br/><br/><br/>
@@ -35,3 +35,6 @@ help users manage and manipulate their media files with ease. Our website offers
 
 ### and many...
 
+## Support
+We are always here if you encounter any problem related to the site
+- Faisal ( algabanif@gmail.com ) 
