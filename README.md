@@ -1,4 +1,4 @@
-# Brmjha Web Task (Build a web application with a lot of features):
+# Brmjha Web Task (Build a web application with a lot of features)
 
 
 
