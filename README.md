@@ -31,7 +31,7 @@ help users manage and manipulate their media files with ease. Our website offers
 <img src="/assets/img/feature3.jpg" style="width: 1000px;"><br/><br/><br/><br/>
 
 #### feature1 ( QR code generator ) 
-<img src="/assets/img/feature4.jpg" style="width: 1000px;"><br/><br/><br/><br/>
+<img src="/assets/img/feature4.jpg" style="width: 1000px;"><br/>
 
 ### and many...
 
