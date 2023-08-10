@@ -9,7 +9,6 @@ help users manage and manipulate their media files with ease. Our website offers
 
 ### Website Link : https://brmjhaeasytasks.netlify.app/index.html
 
-
 ### Our Team 
 - Faisal Algabani
 - Meteabh Aldawasri
